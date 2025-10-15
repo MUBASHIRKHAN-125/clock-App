@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Clock</title>
+    <link rel="stylesheet" href="./src/output.css">
+</head>
+
+<body class=" flex justify-center items-center h-screen bg-black">
+    <div class="maincontainer flex justify-center items-center flex-col bg-[#dbe4e6] w-full h-[700px] gap-y-3">
+        <div
+            class="container1 bg-gradient-to-r from-[#00E0D8] to-[#006E90] w-[500px] h-[80px] rounded-md flex items-center justify-center text-white">
+            <h1 class="text-3xl font-bold">Switch Theme</h1>
+        </div>
+        <div class="container2 bg-[#272e38]  w-[500px] h-44 px-3  flex justify-center items-center text-[#cbcbcb]">
+            <div class="rounded-xl clock bg-[#0f1620] text-white text-6xl h-28 w-96 flex items-center justify-center">
+                <p class="font-[DigitalClock]">
+                    <span id="hours">00</span> :
+                    <span id="minutes">00</span> :
+                    <span id="seconds">00</span>
+                    <sub id="session" class="text-[12px] font-[Arial]">PM</sub>
+                </p>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="clock.js"></script>
+</body>
+
+</html>
