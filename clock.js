@@ -1,6 +1,9 @@
 let hours = document.getElementById("hours");
 let minutes = document.getElementById("minutes");
 let seconds = document.getElementById("seconds");
+let daysDisplay = document.getElementById("days");
+
+let updateDays = ["Sunday" , "Monday" , "Tuesday" , "Wednesday" , "Thursday" ,"Friday" , "Saturaday"  ];
 
 const updateTime = () => {
 
@@ -10,6 +13,7 @@ const updateTime = () => {
 
             const currentDate = new Date();
 
+            daysDisplay.innerText = updateDays[currentDate.getDay()];
             let hr = currentDate.getHours();
             let min = currentDate.getMinutes();
             let sec = currentDate.getSeconds();
