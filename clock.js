@@ -2,8 +2,11 @@ let hours = document.getElementById("hours");
 let minutes = document.getElementById("minutes");
 let seconds = document.getElementById("seconds");
 let daysDisplay = document.getElementById("days");
+let datesDisplay = document.getElementById("dates");
 
-let updateDays = ["Sunday" , "Monday" , "Tuesday" , "Wednesday" , "Thursday" ,"Friday" , "Saturaday"  ];
+
+const updateDays = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturaday"];
+const updateMonth = [1,2,3,4,5,6,7,8,9,10];
 
 const updateTime = () => {
 
@@ -14,6 +17,12 @@ const updateTime = () => {
             const currentDate = new Date();
 
             daysDisplay.innerText = updateDays[currentDate.getDay()];
+            let datesShow = currentDate.getDate();
+            let monthShow = updateMonth[currentDate.getMonth()];
+            let fullYearShow = currentDate.getFullYear();
+
+            datesDisplay.innerText = `${fullYearShow}-${monthShow}-${datesShow}`;
+
             let hr = currentDate.getHours();
             let min = currentDate.getMinutes();
             let sec = currentDate.getSeconds();
@@ -36,3 +45,16 @@ const updateTime = () => {
     });
 };
 updateTime();
+
+
+
+
+
+
+
+
+
+
+
+
+
